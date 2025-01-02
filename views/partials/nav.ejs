@@ -1,0 +1,18 @@
+<nav>
+  <div class="site-title">
+    <h1><a href="/">Blog Site</a></h1>
+    <p>A NET BLOG SITE</p>
+  </div>
+  <ul>
+    <li><a href="/about">About</a></li>
+    <li><a href="/blogs/create">New Blogs</a></li>
+    <% if(user){ %>
+      <li>||</li>
+    <li><%= user.email %></li>
+    <li><a href="/logout">Log out</a></li>
+    <% }else{ %>
+    <li><a href="/login">Log in</a></li>
+    <li><a href="signup" class="btn">Sign up</a></li>
+    <% } %>
+  </ul>
+</nav>
