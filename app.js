@@ -32,44 +32,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(morgan("dev"));
 app.use(cookieParser());
 
-// //mongoose and mongo sandbox routes
-// app.get("/add-blog", (req, res) => {
-//   const blog = new Blog({
-//     title: "New Blog 2",
-//     snippet: "about my new blog",
-//     body: "this is my new blog post",
-//   });
-
-//   blog
-//     .save()
-//     .then((result) => {
-//       res.send(result);
-//     })
-//     .catch((err) => {
-//       console.log(err);
-//     });
-// });
-
-// app.get("/all-blogs", (req, res) => {
-//   Blog.find()
-//     .then((result) => {
-//       res.send(result);
-//     })
-//     .catch((err) => {
-//       console.log(err);
-//     });
-// });
-
-// app.get("/single-blog", (req, res) => {
-//   Blog.findById('6749ad3f8302972c30fd0dcd')
-//     .then((result) => {
-//       res.send(result);
-//     })
-//     .catch((err) => {
-//       console.log(err);
-//     });
-// });
-
 //routes
 app.get("*", checkUser);
 app.get("/", (req, res) => {
